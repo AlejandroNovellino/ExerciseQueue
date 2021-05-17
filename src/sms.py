@@ -8,11 +8,10 @@ def send(body='Some body', to=''):
     auth_token = '5651e5f25d87fc34cd765ba9adcadf3d'
     client = Client(account_sid, auth_token)
 
-    message = client.messages \
-                    .create(
-                        body=body,
-                        from_='+14438430594',
-                        to='+5804141005242'+to
-                    )
+    message = client.messages.create(
+        body=body,
+        from_='+14438430594',
+        to='+5804141005242'+to
+    )
 
     print(message.sid)
