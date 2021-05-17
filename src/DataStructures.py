@@ -9,10 +9,19 @@ class Queue:
             self._mode = mode
     
     def enqueue(self, item):
-        pass
+        if self._mode == 'FIFO':
+            return self._queue.append(item)
+        else:
+            return self._queue.insert(0, item)
+
     def dequeue(self):
-        pass
+        if self._mode == 'FIFO':
+            return self._queue.pop(0)
+        else:
+            return self._queue.pop()
+        
     def get_queue(self):
         return self._queue
+
     def size(self):
-        pass
+        return len(self._queue)
