@@ -80,7 +80,7 @@ What would you like to do (type a number and press Enter)?
             continue
         print("Removing the first person")
         print(removedPerson[0], removedPerson[1])
-        #send(removedPerson[0]+" was removed from the queue")
+        send(removedPerson[0]+" was removed from the queue", removedPerson[1])
 
     elif option == 3:
         cls()
